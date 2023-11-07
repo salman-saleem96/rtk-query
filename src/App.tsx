@@ -30,7 +30,7 @@ function App() {
             {
               <h1>
                 {data?.map((item) => {
-                  item?.email;
+                  return <h6>{item?.email}</h6>;
                 })}
               </h1>
             }

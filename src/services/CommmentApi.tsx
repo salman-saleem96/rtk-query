@@ -10,6 +10,9 @@ export const CommentApi = createApi({
     getComments: builder.query<Comment[], void>({
       query: () => `/comments`,
     }),
+    getcomment: builder.query<Comment, string>({
+      query: (id) => `/comments/${id}`,
+    }),
   }),
 });
-export const { useGetCommentsQuery } = CommentApi;
+export const { useGetCommentsQuery, useGetcommentQuery } = CommentApi;
